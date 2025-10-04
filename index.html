@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delicious Dishes - Recipe Finder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="WhatsApp Image 2025-09-25 at 19.35.23_2d1a3928.jpg" alt="Logo" class="logo-img">
+    <h1><span class="orange">Delicious</span> <span class="green">Dishes</span></h1>
+  </div>
+  <p class="tagline"><h3> Bring Authentic Taste to Your Home – Cook with Your Ingredients, Right in Your Kitchen </h3></p>
+  <nav>
+    <button id="home-btn">Home</button>
+    <button id="fav-btn">Favorites</button>
+  </nav>
+</header>
+
+<section class="search-section">
+  <div class="search-box-left">
+    <input type="text" id="name-search" placeholder="Search by recipe name...">
+    <button id="search-name-btn">Search</button>
+    <button id="filter-btn">Filter</button>
+  </div>
+  <div class="search-box-right">
+    <input type="text" id="ingredient-search" placeholder="Enter ingredient...">
+    <button id="add-ingredient-btn">Add</button>
+    <button id="search-ingredients-btn">Search Recipes</button>
+    <div id="ingredient-chips"></div>
+  </div>
+</section>
+
+<main id="recipe-list"></main>
+<button id="load-more">Load More</button>
+
+<div id="filter-modal" class="filter-modal">
+  <div class="filter-content">
+    <h3>Advanced Filters</h3>
+    <div class="filter-section">
+      <label><strong>Cuisine Type:</strong></label>
+      <select id="cuisine-filter">
+        <option value="">Any</option>
+        <option value="Indian">Indian</option>
+        <option value="Italian">Italian</option>
+        <option value="Mexican">Mexican</option>
+        <option value="Chinese">Chinese</option>
+        <option value="Thai">Thai</option>
+        <option value="Portugal">Portugal</option>
+        <option value="Russia">Russia</option>
+        <option value="British">British</option>
+      </select>
+    </div>
+    <div class="filter-section">
+      <label><strong>Meal Type:</strong></label>
+      <select id="category-filter">
+        <option value="">Any</option>
+        <option value="Dessert">Dessert</option>
+        <option value="Chicken">Chicken</option>
+        <option value="Seafood">Seafood</option>
+        <option value="Vegetarian">Vegetarian</option>
+        <option value="Lamb">Lamb</option>
+      </select>
+    </div>
+    <div class="filter-section">
+      <label><strong>Cooking Time:</strong></label>
+      <select id="time-filter">
+        <option value="">Any</option>
+        <option value="Short">&lt;30 min</option>
+        <option value="Medium">30-60 min</option>
+        <option value="Long">&gt;60 min</option>
+      </select>
+    </div>
+    <div class="filter-buttons">
+      <button id="apply-filter">Done</button>
+      <button id="cancel-filter">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<div id="recipe-modal" class="modal">
+  <div class="modal-content">
+    <span id="modal-close">&times;</span>
+    <img id="modal-img" class="modal-img">
+    <h2 id="modal-title"></h2>
+    <div class="modal-info">
+      <div><strong>Cuisine:</strong> <span id="modal-cuisine"></span></div>
+      <div><strong>Category:</strong> <span id="modal-category"></span></div>
+      <div><strong>Calories:</strong> <span id="modal-calories"></span></div>
+    </div>
+    <div class="rating-share">
+      <div class="stars" id="modal-stars">
+        <span data-value="1">★</span><span data-value="2">★</span><span data-value="3">★</span><span data-value="4">★</span><span data-value="5">★</span>
+      </div>
+      <div class="share-buttons">
+        <button class="whatsapp">WhatsApp</button>
+        <button class="facebook">Facebook</button>
+        <button class="copylink">Copy Link</button>
+        <span id="copy-popup" class="copy-popup">Link Copied!</span>
+      </div>
+    </div>
+    <h3>Ingredients</h3>
+    <table id="modal-ingredients"></table>
+    <h3>Instructions</h3>
+    <div id="modal-instructions"></div>
+    <h3>Video</h3>
+    <div id="modal-video"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
